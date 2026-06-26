@@ -15,24 +15,16 @@ const projectsData = [
     previewUrl: "https://kube-website-eta.vercel.app/",
   },
   {
-    id: 2,
-    title: "Next TODO app",
-    description: "Project 2 description",
-    image: "/images/projects/next-to-do.png",
+    id: 1,
+    title: "Car Showcase",
+    description: "Project 1 description",
+    image: "/images/projects/car-showcase.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/Thangurasarah/next-mytodo.git",
-    previewUrl: "https://next-mytodo.vercel.app/",
+    gitUrl: "https://github.com/sarahwangui-dev/car-showcase.git",
+    previewUrl: "https://car-showcase-pi.vercel.app/",
   },
-  {
-    id: 3,
-    title: "React TODO app",
-    description: "Project 3 description",
-    image: "/images/projects/react-to-do.png",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/Thangurasarah/TODO-list.git",
-    previewUrl: "https://todo-list-seven-nu.vercel.app/",
-  },
-];
+]
+
 
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
@@ -69,7 +61,7 @@ const ProjectsSection = () => {
           isSelected={tag === "Web"}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul ref={ref} className="grid md:grid-cols-2 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}
